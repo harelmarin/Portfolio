@@ -32,3 +32,19 @@ hiddenElements.forEach((element) => {
 
 /* LANDING PAGE */
 
+document.addEventListener('DOMContentLoaded', function() {
+    const videoContainers = document.querySelectorAll('.video-container');
+
+    videoContainers.forEach(container => {
+        const video = container.querySelector('.video-item');
+        
+        container.addEventListener('mouseenter', () => {
+            video.play();
+        });
+
+        container.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0; // Remet la vidéo au début
+        });
+    });
+});
