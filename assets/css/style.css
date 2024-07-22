@@ -34,7 +34,7 @@ main {
 /* HEADER */
 .container-header {
     width: 90vw;
-    height: 90vh;
+    height: 60vh;
     background-color: #141414;
     color: #F1F1F1;
     padding-top: 20vh;
@@ -70,8 +70,8 @@ main {
 }
 
 .container-fleche {
+    margin-bottom: 30vh;
     width: 100%;
-    margin-top: 30vh;
     display: flex;
     flex-direction: row;
     align-items: center;
