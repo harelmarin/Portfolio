@@ -52,6 +52,23 @@ main {
     font-family: 'MonoBold';
 }
 
+.icon  {
+    width: 30px;
+    height: 30px;
+    margin-top: 1vh;
+    opacity: 0.8;
+    transition: transform 0.7s ease;
+    position: fixed;
+    top: 5vh;
+    right: 5vh;
+}
+
+.icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 .container-fleche {
     width: 100%;
     margin-top: 30vh;
