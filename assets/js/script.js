@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         container.addEventListener('mouseleave', () => {
             video.pause();
-            video.currentTime = 0; // Remet la vidéo au début
+            video.currentTime = 0; 
         });
     });
 });
+
