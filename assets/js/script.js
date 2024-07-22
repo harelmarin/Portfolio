@@ -49,3 +49,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+/* RESPONSIVE VIDEO */
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    function updateVideoAttributes() {
+      const videos = [
+        { id: '1', poster: '../assets/img/wethefoot.mp4' },
+        { id: '2', poster: '../assets/img/BlogYmmersion.MP4' },
+        { id: '3', poster: '../assets/img/Groupie.mp4' },
+        // Ajoutez ici d'autres vidéos si nécessaire
+      ];
+
+      videos.forEach(videoData => {
+        const video = document.getElementById(videoData.id);
+        if (window.innerWidth <= 800) {
+          video.setAttribute('controls', true);
+          video.setAttribute('poster', videoData.poster);
+        } else {
+          video.removeAttribute('controls');
+          video.removeAttribute('poster');
+        }
+      });
+    }
+
+    // Initial check
+    updateVideoAttributes();
+
+    // Update on resize
+    window.addEventListener('resize', updateVideoAttributes);
+  });
+
+
