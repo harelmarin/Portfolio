@@ -183,7 +183,6 @@ main {
     transform: scale(1.1);
     z-index: 5;
     opacity: 1;
-    cursor: pointer;
 }   
 
 .video-item {
@@ -274,6 +273,76 @@ main {
     margin-bottom: 4vh;
 }
 
+
+/* RECTANGLE PRO */
+
+.invisible {
+    display: none;
+}
+
+.blurred {
+    filter: blur(3px);
+}
+
+
+.details-container {
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-height: 70%;
+    background: #F1F1F1;
+    padding: 20px;
+    padding-right: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,5);
+    z-index: 1000;
+    color: #141414;
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+.details-content {
+    margin-left: 5vw;
+    line-height: 1.6;
+}
+
+.details-content h2 {
+    font-family: 'Integral';
+    font-size: 30px;
+}
+
+.details-content h3 {
+    font-size: 20px;
+    margin-top: 5vh;
+    font-family: 'Integral';
+    margin-bottom: 2vh;
+}
+
+.details-content p {
+    font-size: 18px;
+    font-family: 'Paralucent';
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: transform 0.7s ease;
+}
+
+.closeButton:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 800px) {
@@ -339,59 +408,4 @@ main {
        font-size: 15px;
     }
     
-}
-
-
-/* RECTANGLE PRO */
-
-.invisible {
-    display: none;
-}
-
-.blurred {
-    filter: blur(3px);
-}
-
-
-.details-container {
-    border-radius: 5px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: 70%;
-    background: #F1F1F1;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
-
-.details-content {
-    text-align: center;
-}
-
-.details-content h2 {
-    margin-bottom: 20px;
-}
-
-.details-content p {
-    margin-bottom: 20px;
-}
-
-.closeButton {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    background: none;
-    border: none;
-    font-size: 40px;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: transform 0.7s ease;
-}
-
-.closeButton:hover {
-    opacity: 1;
-    transform: scale(1.2);
 }

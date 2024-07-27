@@ -95,14 +95,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fonction pour ouvrir le rectangle de détails
     function openDetails() {
-        stageDetails.classList.remove("invisible"); // Affiche le conteneur de détails
-        mainContent.classList.add("no-scroll"); // Désactive le défilement du contenu principal
+        stageDetails.classList.remove("invisible"); 
+        mainContent.classList.add("blurred");
     }
 
     // Fonction pour fermer le rectangle de détails
     function closeDetails() {
-        stageDetails.classList.add("invisible"); // Masque le conteneur de détails
-        mainContent.classList.remove("no-scroll"); // Réactive le défilement du contenu principal
+        stageDetails.classList.add("invisible"); 
+        mainContent.classList.remove("blurred"); 
     }
 
     stageImage.addEventListener("click", function() {
