@@ -22,7 +22,7 @@
          </div>
     </header>
 
-    <main>
+    <main id="mainContent">
         <div id="projects" class="container-titre hidden">
         <h2 class="hidden"> MES PROJETS </h2>
         </div>
@@ -83,14 +83,23 @@
                 <section  class="container-pro hidden">
                    <div class="container-flex hidden">
                     <div class="img-container">
-                            <img src="../assets/img/DesktopBuscu.png" alt="Image site stage 2023 / 2024">
+                            <img id="stageImage" src="../assets/img/DesktopBuscu.png" alt="Image site stage 2023 / 2024">
                             <div class="img-details">
                                 <h2> Stage 2023 / 2024 </h2>
                             </div>
                     </div>
                    </div>
                 </section>
+
     </main>
+                 <!-- Conteneur pour le rectangle de détails -->
+                 <div id="stageDetails" class="details-container invisible">
+                    <div class="details-content">
+                        <button id="closeButton" class="closeButton">&times;</button>
+                        <h2>Détails du Stage 2023 / 2024</h2>
+                        <p>Voici une description de mon stage...</p>
+                    </div>
+                </div>
 
 </body>
 </html>

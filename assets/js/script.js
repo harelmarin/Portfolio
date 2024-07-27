@@ -81,3 +81,46 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const stageImage = document.getElementById("stageImage");
+    const stageDetails = document.getElementById("stageDetails");
+    const closeButton = document.getElementById("closeButton");
+    const mainContent = document.getElementById("mainContent");
+
+    // Fonction pour ouvrir le rectangle de détails
+    function openDetails() {
+        stageDetails.classList.remove("invisible"); // Affiche le conteneur de détails
+        mainContent.classList.add("no-scroll"); // Désactive le défilement du contenu principal
+    }
+
+    // Fonction pour fermer le rectangle de détails
+    function closeDetails() {
+        stageDetails.classList.add("invisible"); // Masque le conteneur de détails
+        mainContent.classList.remove("no-scroll"); // Réactive le défilement du contenu principal
+    }
+
+    stageImage.addEventListener("click", function() {
+        openDetails();
+    });
+
+    closeButton.addEventListener("click", function() {
+        closeDetails();
+    });
+
+    // Ferme le rectangle de détails si on clique en dehors de celui-ci
+    document.addEventListener("click", function(event) {
+        if (!stageDetails.contains(event.target) && event.target !== stageImage) {
+            closeDetails();
+        }
+    });
+});
+
+
+
+

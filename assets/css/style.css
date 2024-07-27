@@ -240,9 +240,6 @@ main {
 
 /* EXPERIENCE */
 
-
-
-
 .container-pro img {
     opacity: 0.6;
     width: 95%;
@@ -268,7 +265,7 @@ main {
     flex-direction: column;
 }
 
-.video-details {
+.img-details {
     color: #F1F1F1;
     font-family: 'Integral';
     display: flex;
@@ -342,4 +339,59 @@ main {
        font-size: 15px;
     }
     
+}
+
+
+/* RECTANGLE PRO */
+
+.invisible {
+    display: none;
+}
+
+.blurred {
+    filter: blur(3px);
+}
+
+
+.details-container {
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background: #F1F1F1;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.details-content {
+    text-align: center;
+}
+
+.details-content h2 {
+    margin-bottom: 20px;
+}
+
+.details-content p {
+    margin-bottom: 20px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: transform 0.7s ease;
+}
+
+.closeButton:hover {
+    opacity: 1;
+    transform: scale(1.2);
 }
