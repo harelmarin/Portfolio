@@ -325,6 +325,18 @@ main {
     font-family: 'Paralucent';
 }
 
+.details-content h5 {
+    margin-top: 5vh;
+    font-size: 20px;
+    font-family: 'Integral';
+}
+.details-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 4vh;
+   
+}
+
 .closeButton {
     position: absolute;
     top: 20px;
