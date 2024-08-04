@@ -9,7 +9,7 @@ Welcome to my personal portfolio! This is a simple portfolio website created wit
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Contribution] (#contribution)
+- [Contribution](#contribution)
 
 ---
 
@@ -47,3 +47,9 @@ This portfolio website is designed to present my work and projects in a clean an
 ---
 
 2. open index.html in your web browser
+
+## Contribution
+
+Harel Marin => https://github.com/harelmarin
+
+
