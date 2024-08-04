@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     function updateVideoAttributes() {
       const videos = [
-        { id: '1', poster: '../assets/img/wethefoot.mp4' },
-        { id: '2', poster: '../assets/img/BlogYmmersion.MP4' },
-        { id: '3', poster: '../assets/img/Groupie.mp4' },
-        { id: '4', poster: '../assets/img/UBuscu.mp4' },
+        { id: '1', poster: 'assets/img/wethefoot.mp4' },
+        { id: '2', poster: 'assets/img/BlogYmmersion.MP4' },
+        { id: '3', poster: 'assets/img/Groupie.mp4' },
+        { id: '4', poster: 'assets/img/UBuscu.mp4' },
       ];
 
       videos.forEach(videoData => {

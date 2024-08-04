@@ -5,17 +5,17 @@
 
 @font-face {
     font-family: 'MonoBold';
-    src: url(../font/SpaceMono-Bold.ttf);
+    src: url(/assets/font/SpaceMono-Bold.ttf);
 }
 
 @font-face {
     font-family: 'Integral';
-    src: url(../font/IntegralCF-Bold.ttf);
+    src: url(/assets/font/IntegralCF-Bold.ttf);
 }
 
 @font-face {
     font-family: 'Paralucent';
-    src: url(../font/ParalucentCondMedium.otf);
+    src: url(/assets/font/ParalucentCondMedium.otf);
 }
 
 html {
