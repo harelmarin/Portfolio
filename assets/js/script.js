@@ -1,7 +1,7 @@
 /* DYNAMIX TEXT */
 
 var options = {
-    strings: ["étudiant", "développeur", "designer", "passionné"],
+    strings: ["étudiant", "développeur", "passionné"],
     typeSpeed: 100,
     backSpeed: 50,
     backDelay: 2000,

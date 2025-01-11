@@ -174,7 +174,6 @@ main {
 }
 
 .container-flex video:hover {
-  transform: scale(1.05);
   z-index: 5;
   opacity: 1;
 }
@@ -256,7 +255,7 @@ main {
 }
 
 .container-flex img:hover {
-  transform: scale(1.1);
+  transform: scale(1.07);
   z-index: 5;
   opacity: 1;
   cursor: pointer;
@@ -442,3 +441,4 @@ main {
     font-size: 15px;
   }
 }
+
