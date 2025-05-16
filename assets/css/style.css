@@ -4,18 +4,18 @@
 }
 
 @font-face {
-  font-family: "MonoBold";
-  src: url("../font/SpaceMono-Bold.ttf");
+  font-family: 'MonoBold';
+  src: url('../font/SpaceMono-Bold.ttf');
 }
 
 @font-face {
-  font-family: "Integral";
-  src: url("../font/IntegralCF-Bold.ttf");
+  font-family: 'Integral';
+  src: url('../font/IntegralCF-Bold.ttf');
 }
 
 @font-face {
-  font-family: "Paralucent";
-  src: url("../font/ParalucentCondMedium.otf");
+  font-family: 'Paralucent';
+  src: url('../font/ParalucentCondMedium.otf');
 }
 
 html {
@@ -58,13 +58,13 @@ main {
 
 .container-header h1 {
   font-size: 80px;
-  font-family: "Integral";
+  font-family: 'Integral';
 }
 
 .container-header h3 {
   font-size: 70px;
   margin-top: 1vh;
-  font-family: "MonoBold";
+  font-family: 'MonoBold';
 }
 
 .icon {
@@ -153,7 +153,7 @@ main {
 
 .container-titre h2 {
   font-size: 80px;
-  font-family: "Integral";
+  font-family: 'Integral';
   color: #f1f1f1;
 }
 
@@ -186,13 +186,18 @@ main {
 
 .video-item {
   margin-bottom: 1vh;
+  height: 100%;
+}
+
+.video-item-go {
+  margin-bottom: 1vh;
   height: 400px;
 }
 
 .video-details {
   width: 80%;
   color: #f1f1f1;
-  font-family: "Integral";
+  font-family: 'Integral';
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,14 +230,14 @@ main {
 
 .container-propos h4 {
   font-size: 20px;
-  font-family: "Integral";
+  font-family: 'Integral';
   color: #f1f1f1;
   margin-right: 5vw;
 }
 
 .container-text {
   width: 50%;
-  font-family: "Paralucent";
+  font-family: 'Paralucent';
   color: #f1f1f1;
   font-size: 20px;
 }
@@ -273,7 +278,7 @@ main {
 
 .img-details {
   color: #f1f1f1;
-  font-family: "Integral";
+  font-family: 'Integral';
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -314,26 +319,26 @@ main {
 }
 
 .details-content h2 {
-  font-family: "Integral";
+  font-family: 'Integral';
   font-size: 30px;
 }
 
 .details-content h3 {
   font-size: 20px;
   margin-top: 5vh;
-  font-family: "Integral";
+  font-family: 'Integral';
   margin-bottom: 2vh;
 }
 
 .details-content p {
   font-size: 18px;
-  font-family: "Paralucent";
+  font-family: 'Paralucent';
 }
 
 .details-content h5 {
   margin-top: 5vh;
   font-size: 20px;
-  font-family: "Integral";
+  font-family: 'Integral';
 }
 .details-content img {
   width: 100%;
@@ -441,4 +446,3 @@ main {
     font-size: 15px;
   }
 }
-
