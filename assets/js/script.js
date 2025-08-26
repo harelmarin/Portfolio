@@ -1,127 +1,102 @@
 /* DYNAMIX TEXT */
 
 var options = {
-    strings: ["étudiant", "développeur", "passionné"],
-    typeSpeed: 100,
-    backSpeed: 50,
-    backDelay: 2000,
-    loop: true
-  };
-  
-  var typed = new Typed(".dynamic-text", options);
+  strings: ["étudiant", "développeur", "passionné"],
+  typeSpeed: 100,
+  backSpeed: 50,
+  backDelay: 2000,
+  loop: true,
+};
 
+var typed = new Typed(".dynamic-text", options);
 
-  /* SCROLL */
+/* SCROLL */
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
-    });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
 });
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((element) => {
-    observer.observe(element);
+  observer.observe(element);
 });
-
 
 /* LANDING PAGE */
 
-document.addEventListener('DOMContentLoaded', function() {
-    const videoContainers = document.querySelectorAll('.video-container');
+document.addEventListener("DOMContentLoaded", function () {
+  const videoContainers = document.querySelectorAll(".video-container");
 
-    videoContainers.forEach(container => {
-        const video = container.querySelector('.video-item');
-        
-        container.addEventListener('mouseenter', () => {
-            video.play();
-        });
+  videoContainers.forEach((container) => {
+    const video = container.querySelector(".video-item");
 
-        container.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0; 
-        });
+    container.addEventListener("mouseenter", () => {
+      video.play();
     });
-});
 
-/* RESPONSIVE VIDEO */
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    function updateVideoAttributes() {
-      const videos = [
-        { id: '1', poster: 'assets/img/wethefoot.mp4' },
-        { id: '2', poster: 'assets/img/BlogYmmersion.MP4' },
-        { id: '3', poster: 'assets/img/Groupie.mp4' },
-        { id: '4', poster: 'assets/img/Crudapp.mp4' },
-        { id: '5', poster: 'assets/img/Bookbox.mp4' },
-      ];
-
-      videos.forEach(videoData => {
-        const video = document.getElementById(videoData.id);
-        if (window.innerWidth <= 800) {
-          video.setAttribute('controls', true);
-          video.setAttribute('poster', videoData.poster);
-        } else {
-          video.removeAttribute('controls');
-          video.removeAttribute('poster');
-        }
-      });
-    }
-
-    // Initial check
-    updateVideoAttributes();
-
-    // Update on resize
-    window.addEventListener('resize', updateVideoAttributes);
+    container.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
   });
-
-
-
-
-
-
-
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const stageImage = document.getElementById("stageImage");
-    const stageDetails = document.getElementById("stageDetails");
-    const closeButton = document.getElementById("closeButton");
-    const mainContent = document.getElementById("mainContent");
-
-    // Fonction pour ouvrir le rectangle de détails
-    function openDetails() {
-        stageDetails.classList.remove("invisible"); 
-        mainContent.classList.add("blurred");
-    }
-
-    // Fonction pour fermer le rectangle de détails
-    function closeDetails() {
-        stageDetails.classList.add("invisible"); 
-        mainContent.classList.remove("blurred"); 
-    }
-
-    stageImage.addEventListener("click", function() {
-        openDetails();
-    });
-
-    closeButton.addEventListener("click", function() {
-        closeDetails();
-    });
-
-    // Ferme le rectangle de détails si on clique en dehors de celui-ci
-    document.addEventListener("click", function(event) {
-        if (!stageDetails.contains(event.target) && event.target !== stageImage) {
-            closeDetails();
-        }
-    });
 });
 
+/* STAGES 2023/2024 et 2024/2025 */
 
+document.addEventListener("DOMContentLoaded", function () {
+  const mainContent = document.getElementById("mainContent");
 
+  const stage2023 = {
+    image: document.getElementById("stageImage"),
+    details: document.getElementById("stageDetails"),
+    closeBtn: document.getElementById("closeButton"),
+  };
 
+  const stage2024 = {
+    image: document.getElementById("stageImage2024"),
+    details: document.getElementById("stageDetails2024"),
+    closeBtn: document.getElementById("closeButton2024"),
+  };
+
+  function openStage(stage) {
+    // Ferme tous les autres détails
+    [stage2023, stage2024].forEach((s) => {
+      if (s !== stage) {
+        s.details.classList.add("invisible");
+      }
+    });
+    // Ouvre le détail du stage
+    stage.details.classList.remove("invisible");
+    mainContent.classList.add("blurred");
+  }
+
+  function closeStage(stage) {
+    stage.details.classList.add("invisible");
+    mainContent.classList.remove("blurred");
+  }
+
+  // Events ouverture
+  stage2023.image.addEventListener("click", () => openStage(stage2023));
+  stage2024.image.addEventListener("click", () => openStage(stage2024));
+
+  // Events fermeture
+  stage2023.closeBtn.addEventListener("click", () => closeStage(stage2023));
+  stage2024.closeBtn.addEventListener("click", () => closeStage(stage2024));
+
+  // Ferme si clic en dehors
+  document.addEventListener("click", function (event) {
+    [stage2023, stage2024].forEach((stage) => {
+      if (
+        !stage.details.contains(event.target) &&
+        event.target !== stage.image
+      ) {
+        closeStage(stage);
+      }
+    });
+  });
+});
